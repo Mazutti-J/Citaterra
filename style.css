@@ -9,12 +9,20 @@
 }
 
 body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fundo_esverdeado.png');
     font-family: "Chakra Petch", sans-serif;
     color: var(--cor-principal);
 }
 
+.parallax-container {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
 .parallax-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fundo_amarelado.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fundo_esverdeado.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
