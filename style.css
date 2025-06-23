@@ -8,57 +8,58 @@
     --cor-destaque3: #2a66ad;
 }
 
-.title1{
-    color: var(--cor-destaque2);
-}
-
-.title2{
-    color: var(--cor-destaque1);
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    /* Set the navbar to fixed position */
-    top: 0;
-    /* Position the navbar at the top of the page */
-    width: 100%;
-    /* Full width */
-    z-index: +1;
-
-}
-
 body {
     font-family: "Chakra Petch", sans-serif;
     color: var(--cor-principal);
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('main_background.png');
-    background-repeat: no-repeat;
+}
+
+.parallax-container {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.parallax-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('imagens/fundo/fundo_esverdeado.png');
     background-size: cover;
-    overflow: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 2560px;
+    z-index: -1;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.title1 {
+    color: var(--cor-destaque2);
+    pointer-events: none;
+}
+
+.title2 {
+    color: var(--cor-destaque1);
+    pointer-events: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: +1;
 }
 
 .body-hero {
     padding: 20px;
 }
 
-.box {
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
-
 h1,
 h2,
-h5 {
+h5,
+.bi {
     color: var(--cor-secundaria);
     font-weight: 700;
 }
@@ -74,6 +75,7 @@ a,
     color: var(--cor-principal);
 }
 
-a:hover{
+a:hover,
+.bi-button:hover {
     color: var(--cor-destaque3);
 }
