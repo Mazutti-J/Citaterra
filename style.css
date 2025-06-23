@@ -140,7 +140,7 @@ main {
 #bull {
     width: 50px;
     height: 29px;
-    background-image: url('../imagens/sprites/bull_running.gif');
+    background-image: url('bull_running.gif');
     background-size: cover;
     position: absolute;
     bottom: 10px;
@@ -154,7 +154,7 @@ main {
 #obj {
     width: 20px;
     height: 40px;
-    background-image: url('../imagens/modals/modal_1.png');
+    background-image: url('green_car.png');
     background-size: cover;
     position: absolute;
     bottom: 10px;
