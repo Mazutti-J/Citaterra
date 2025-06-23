@@ -21,7 +21,7 @@ body {
 }
 
 .parallax-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('imagens/fundo/fundo_esverdeado.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imagens/fundo/fundo_azulado.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -33,6 +33,130 @@ body {
     z-index: -1;
     transform: translateY(0);
     will-change: transform;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    margin: 10px auto;
+    border: 2px solid #100c1f;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 50%) 100%);
+}
+
+#backgroundContainer {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg-block {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#bull {
+    width: 50px;
+    height: 29px;
+    background-image: url('../imagens/sprites/bull_running.gif');
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.obj {
+    transition: left 0.02s linear;
+}
+
+#obj {
+    width: 20px;
+    height: 40px;
+    background-image: url('../imagens/modals/modal_1.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 800px;
+    transition: left 0.02s linear;
+}
+
+@keyframes obj-movement {
+    from {
+        right: -50px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.bull-active {
+    animation: bull-jump 0.75s ease-out;
+}
+
+@keyframes bull-jump {
+    0% {
+        bottom: 10px;
+    }
+
+    50% {
+        bottom: 400px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+}
+
+.start-screen,
+.game-over {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cutscene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cutscene video {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 0 20px black;
+    background-color: black;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .title1 {
@@ -58,8 +182,7 @@ body {
 
 h1,
 h2,
-h5,
-.bi {
+h5 {
     color: var(--cor-secundaria);
     font-weight: 700;
 }
@@ -75,7 +198,6 @@ a,
     color: var(--cor-principal);
 }
 
-a:hover,
-.bi-button:hover {
+a:hover {
     color: var(--cor-destaque3);
 }
