@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="imagens/logo/logo_campo_cidade.png">
-    <title>Principal - Citaterra</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo/logo_campo_cidade.png">
+    <title>Jogo - Citaterra</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
         <div class="navbar-brand mb-0 row">
             <div style="padding-left: 50px;" class="col-md-4">
-                <img src="imagens/logo/navbar_logo.png" />
+                <img src="../imagens/logo/navbar_logo.png" />
                 <a style="text-decoration:none">CITA</a>
                 <a class="title2" style="text-decoration:none">TERRA</a>
             </div>
@@ -28,138 +28,112 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link disabled" href="#">Principal</a>
+                    <a class="nav-link" href="../index.html">Principal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="artigos/index.html">Artigos</a>
+                    <a class="nav-link" href="../artigos/index.html">Artigos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jogos/index.html">Jogo</a>
+                    <a class="nav-link disabled" href="#">Jogo</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Ambiente
+                    </a>
+                    <ul class="dropdown-menu text-center" tabindex="3">
+                        <!-- Player 1 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 1 -
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-classico.mp3" loop></audio>
+                        </li>
+                        <!-- Player 2 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 2 -
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-instrumental.mp3" loop></audio>
+                        </li>
+                        <!-- Player 3 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 3 -
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-bossa-nova.mp3" loop></audio>
+                        </li>
+                        <!-- Player 4 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 4 -
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-instrumental-2.mp3" loop></audio>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header>
-        <div class="card text-center text-bg-dark">
-            <div class="card-header body-hero">
-                <img class="card-img" src="imagens/banner/banner-1.png" />
-                <div class="janela-moldura"></div>
+    <header class="container text-center body-hero">
+
+        <div class="container my-5 text-bg-dark; border-radius: 250%">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="../imagens/banner/banner-3.png" alt="Card image">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Prepare-se para correr</h5>
+                    <p class="card-text">Um salto pode ser a diferença entre seguir em frente ou virar parte do trânsito</p>
+                    <p class="card-text"><small>Pressione a<kbd>Seta para Cima</kbd> ou <kbd>Espaço</kbd> para pular. Desvie dos carros.</small></p>
+                </div>
             </div>
-            <div class="container">
-                <div class="row flex-row-reverse">
-                    <div class="col-lg-8 card-body">
-                        <h2 class="text-center">"Do chão batido ao asfalto, os encontros e descompassos de dois mundos
-                            em um só país."
-                        </h2>
-                        <h5 class="text-center title2">Nesse site você encontrará:</h5>
-                    </div>
-                    <div>
-                        <p class="badge bg-secondary">Cultura</p>
-                        <p class="badge bg-secondary">Território</p>
-                        <p class="badge bg-secondary">Tradição</p>
-                        <p class="badge bg-secondary">Modernidade</p>
-                        <p class="badge bg-secondary">Comunidade</p>
-                    </div>
+            <div class="card row flex-row-reverse text-bg-dark body-hero">
+                <div class="col-lg-8 card-body">
+                    <h1 class="card-title title2">Sinal Vermelho</h1>
+                    <p class="card-text">Antes do jogo começar, uma pequena cena mostra como tudo saiu dos trilhos. Depois disso, é por sua conta. Pule na hora certa e não pare. Quando estiver pronto, clique em <strong>Jogar</strong>.</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="container mt-5" data-bs-theme="dark">
-        <div class="card text-center">
-            <div class="card-header">
-                <h4 style="padding-top: 10px;;">Qual é a real intenção por trás dessas páginas?</h4>
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>Mais do que divergir, buscamos mostrar as convergências e os fios sutis que unem o que parecia
-                        oposto.</p>
-                </blockquote>
-                <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Ver
-                    mais</button>
+
+    <main class="body-hero" data-bs-theme="dark">
+        <div class="card" style="box-sizing: border-box;">
+        <div class="card-header">
+            <div class="row flex-row-reverse">
+                <div class="d-flex justify-content-between align-items-center gap-3" id="scoreBox"
+                    style="display: none;">
+                    <span class="badge title2">Melhor Pontuação: <span id="bestScore">0</span></span>
+                    <span class="badge title2">Pontuação: <span id="score">0</span></span>
+                    <button type="button" class="btn btn-outline-secondary" id="startBtn">Iniciar Jogo</button>
+                </div>
             </div>
         </div>
-        <div class="row body-hero">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="row card-body">
-                        <div class="col-sm-6">
-                            <h5 class="card-title title1">Artigos</h5>
-                            <p class="card-text">Quer saber mais? Explore e aprofunde-se com textos curtos e acessíveis
-                                sobre o que aqui se apresenta.
-                            </p>
-                            <a type="button" class="btn btn-outline-secondary" href="artigos/index.html">Abrir seção
-                                completa</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="imagens/modals/icon_artigos.png"
-                                style="width: 100%; height: auto; max-height: 250px; object-fit: contain;"
-                                alt="Banner da página" />
-                        </div>
-                    </div>
+        <div class="card-body">
+            <div class="game-container elemento-movel">
+                <div id="backgroundContainer" class="background-container"></div>
+                <div class="overlay" id="dark_overlay"></div>
+                <div class="cutscene d-none elemento-movel" id="cutscene" style="z-index: 1050;">
+                    <video id="cutsceneVideo" class="mw-100 mh-100" style="max-width: 720px;" playsinline
+                        preload="auto">
+                        <source src="../vídeos/cutscene-sinal-vermelho.mp4" type="video/mp4">
+                        Seu navegador não suporta o vídeo.
+                    </video>
+                    <button id="skipBtn" class="btn btn-sm btn-light position-absolute top-0 end-0 m-3">Pular Intro</button>
                 </div>
+
+                <div id="bull" class="hidden"></div>
+                <div id="obj"></div>
+                <audio id="audioStart" src="../sons/jogo/iniciou.mp3"></audio>
+                <audio id="audioJump" src="../sons/jogo/pulou.mp3"></audio>
+                <audio id="audioCrash" src="../sons/jogo/perdeu.mp3"></audio>
+                <audio id="audioPoint" src="../sons/jogo/pontoBaixo.mp3"></audio>
+                <audio id="audioPoint" src="../sons/jogo/pontoAlto.mp3"></audio>
+                <audio id="audioAmbience" src="../sons/jogo/ambiente.mp3" loop></audio>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="row card-body">
-                        <div class="col-sm-6">
-                            <h5 class="card-title title1">Jogo</h5>
-                            <p class="card-text">Que tal um desafio? Jogue nosso despretensioso jogo e divirta-se com uma narrativa
-                                simples, porém inesperada.</p>
-                            <a type="button" class="btn btn-outline-secondary" href="jogos/index.html">Abrir seção completa</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="imagens/modals/icon_jogo.png"
-                                style="width: 100%; height: auto; max-height: 250px; object-fit: contain;"
-                                alt="Banner da página" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </main>
-
-    <!-- Modal-1 -->
-    <div class="modal" id="modal1" tabindex="-1" data-bs-theme="dark">
-        <div class="modal-dialog modal-lg elemento-movel">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Apontamentos Iniciais</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div style="display:none;" id="meuParagrafo">
-                        Qual é a real intenção por trás dessas páginas?
-                        Mais do que divergir, buscamos mostrar as convergências e os fios sutis que unem o que parecia oposto.
-                        Apontamentos Iniciais
-                        Este espaço foi concebido para acolher pessoas de todas as idades e interesses, reunindo conteúdos que celebram a diversidade cultural do Brasil e as diferentes formas de expressão humana. Com textos que exploram temas do campo à cidade, da história à contemporaneidade, o site busca promover um olhar atento e plural sobre o cotidiano e suas transformações.
-                        As publicações aqui presentes foram desenvolvidas a partir de pesquisas realizadas com base em materiais amplamente divulgados, oriundos de instituições reconhecidas e estudos de acesso público. Embora não se apresentem como fontes primárias, os artigos foram elaborados com responsabilidade, seriedade e compromisso com o conhecimento acessível.
-                        Para além da leitura, o visitante encontrará neste espaço criações artísticas e experiências interativas que transitam entre o inusitado e o divertido. Ilustrações, composições musicais e uma narrativa jogável de proposta leve e humor desconcertante convidam o público a explorar também o lado lúdico da cultura.
-                        Entre a informação e a imaginação, o site se propõe como uma travessia livre por expressões e ideias que não cabem em rótulos. Um convite aberto à curiosidade, à reflexão e ao encantamento para quem deseja conhecer, brincar ou apenas olhar o mundo por outras lentes.
-                    </div>
-                    <div>
-                        <a id="ler"><i class="bi bi-play-circle-fill bi-button"></i></a>
-                        <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
-                    </div>
-                        <p>Este espaço foi concebido para acolher pessoas de todas as idades e interesses, reunindo conteúdos que celebram a
-                            diversidade cultural do Brasil e as diferentes formas de expressão humana. Com textos que exploram temas do campo à
-                            cidade, da história à contemporaneidade, o site busca promover um olhar atento e plural sobre o cotidiano e suas
-                            transformações.</p>
-                        <p>As publicações aqui presentes foram desenvolvidas a partir de pesquisas realizadas com base em materiais amplamente
-                            divulgados, oriundos de instituições reconhecidas e estudos de acesso público. Embora não se apresentem como fontes
-                            primárias, os artigos foram elaborados com responsabilidade, seriedade e compromisso com o conhecimento acessível.
-                        </p>
-                        <p>Para além da leitura, o visitante encontrará neste espaço criações artísticas e experiências interativas que
-                            transitam entre o inusitado e o divertido. Ilustrações, composições musicais e uma narrativa jogável de proposta
-                            leve e humor desconcertante convidam o público a explorar também o lado lúdico da cultura.</p>
-                        <p>Entre a informação e a imaginação, o site se propõe como uma travessia livre por expressões e ideias que não cabem em
-                            rótulos. Um convite aberto à curiosidade, à reflexão e ao encantamento para quem deseja conhecer, brincar ou apenas
-                            olhar o mundo por outras lentes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="container py-5">
         <h2>Feedback:</h2>
@@ -174,9 +148,11 @@
         <p class="my-5 text-center">✧Entre campos e cidades, sociedades cooperam.</p>
     </footer>
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <script>
         //Fundo parallax
@@ -187,41 +163,401 @@
                 parallax.style.transform = `translateY(${scroll * -1.5}px)`;
             }
         });
-        //Elemento móvel
-        const imagem = document.querySelector('.elemento-movel');
 
-        window.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 5;
-            const y = (e.clientY / window.innerHeight - 0.5) * 5;
+        //Player de música
+        const players = document.querySelectorAll(".custom-player");
 
-            imagem.style.transform = `translate(${x}px, ${y}px)`;
+        players.forEach(player => {
+            const button = player.querySelector(".play-button");
+            const icon = button.querySelector("i");
+            const audio = player.querySelector("audio");
+
+            button.addEventListener("click", () => {
+                if (audio.paused) {
+                    players.forEach(otherPlayer => {
+                        const otherAudio = otherPlayer.querySelector("audio");
+                        const otherIcon = otherPlayer.querySelector("i");
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                            otherIcon.className = "bi bi-play-circle-fill bi-button";
+                        }
+                    });
+
+                    audio.play();
+                    audio.volume = 0.5;
+                    icon.className = "bi bi-pause-circle-fill bi-button";
+                } else {
+                    audio.pause();
+                    icon.className = "bi bi-play-circle-fill bi-button";
+                }
+            });
+
+            audio.addEventListener("ended", () => {
+                icon.className = "bi bi-play-circle-fill bi-button";
+            });
         });
-        //Text-to-speech
-        const botaoLer = document.getElementById('ler');
-        const botaoParar = document.getElementById('parar');
-        const sintese = window.speechSynthesis;
-        let fala;
 
-        if (botaoLer && botaoParar) {
-            botaoLer.addEventListener('click', () => {
-                const texto = document.getElementById('meuParagrafo')?.textContent || '';
-                if (!('speechSynthesis' in window)) {
-                    alert("Seu navegador não suporta leitura text-to-speech.");
-                    return;
-                }
+        // Elementos 
+        const bull = document.getElementById('bull');
+        const backgroundContainer = document.getElementById('backgroundContainer');
+        let bgBlocks = [];
+        const gameContainer = document.querySelector('.game-container');
+        const startBtn = document.getElementById('startBtn');
+        const scoreBox = document.getElementById('scoreBox');
+        const scoreSpan = document.getElementById('score');
+        const darkOverlay = document.getElementById('dark_overlay');
 
-                if (sintese.speaking) sintese.cancel();
+        const audioStart = document.getElementById('audioStart');
+        const audioJump = document.getElementById('audioJump');
+        const audioCrash = document.getElementById('audioCrash');
+        const audioPoint = document.getElementById('audioPoint');
+        const audioNextBg = document.getElementById('audioPoint');
+        const audioAmbience = document.getElementById('audioAmbience');
 
-                fala = new SpeechSynthesisUtterance(texto);
-                sintese.speak(fala);
-            });
+        // Constantes e Configurações
+        const GRAVITY = 0.6;
+        const INITIAL_JUMP_VELOCITY = 11;
+        const MIN_OBJ_SPACING = 150;
+        const MAX_OBJ_SPEED = 20;
 
-            botaoParar.addEventListener('click', () => {
-                if (sintese.speaking) {
-                    sintese.cancel();
-                }
-            });
+        const backgrounds = [
+            '../imagens/sprites/background_farm.png',
+            '../imagens/sprites/background_forest.png',
+            '../imagens/sprites/background_city.png',
+            '../imagens/sprites/background_beach.png'
+        ];
+
+        const objTypes = [
+            { width: 50, height: 22, img: '../imagens/sprites/green_car.png' },
+            { width: 50, height: 22, img: '../imagens/sprites/purple_car.png' },
+            { width: 50, height: 22, img: '../imagens/sprites/yellow_car.png' }
+        ];
+
+        // Estados
+        let isJumping = false;
+        let isFalling = false;
+        let jumpHold = false;
+        let jumpVelocity = 0;
+        let bullY = 10;
+
+        let isGameRunning = false;
+        let score = 0;
+        let bestScore = parseInt(localStorage.getItem('bestScore')) || 0;
+        const bestScoreSpan = document.getElementById('bestScore');
+        let objSpeed = 4;
+        let bgPosition = 0;
+        let currentBgIndex = 0;
+        let nextBgChange = 10;
+        let objList = [];
+        let gameLoopId;
+        let waitingForBgTransition = false;
+
+        let cutsceneAlreadyPlayed = false;
+        const cutscene = document.getElementById('cutscene');
+        const cutsceneVideo = document.getElementById('cutsceneVideo');
+        const skipBtn = document.getElementById('skipBtn');
+
+        // Funções cutscene
+        function showCutsceneAndStartGame() {
+            cutscene.classList.remove('d-none');
+            cutsceneVideo.currentTime = 0;
+            cutsceneVideo.muted = false;
+            cutsceneVideo.play();
+
+            cutsceneVideo.onended = () => {
+                endCutsceneAndStartGame();
+            };
+
+            skipBtn.onclick = () => {
+                cutsceneVideo.pause();
+                endCutsceneAndStartGame();
+            };
         }
+
+        function endCutsceneAndStartGame() {
+            cutscene.classList.add('d-none');
+            startGame();
+        }
+        // Funções in game
+        function playSound(audioBase) {
+            const clone = audioBase.cloneNode();
+            clone.volume = audioBase.volume;
+            clone.play();
+        }
+
+        function setOverlayOpacity() {
+            const intensity = Math.min(objSpeed / MAX_OBJ_SPEED, 1); 
+            const opacity = 0.5 + intensity * 0.1; 
+            darkOverlay.style.opacity = opacity.toFixed(2);
+        }
+
+        function createBgBlock(imageUrl, left = 800, index = 0) {
+            const bgBlock = document.createElement('div');
+            bgBlock.classList.add('bg-block');
+            bgBlock.dataset.bgId = index;
+            bgBlock.style.backgroundImage = `url('${imageUrl}')`;
+            bgBlock.style.left = `${left}px`;
+            bgBlock.style.top = '0';
+            bgBlock.style.width = '800px';
+            bgBlock.style.height = '100%';
+            backgroundContainer.appendChild(bgBlock);
+            bgBlocks.push(bgBlock);
+        }
+
+        function createObj() {
+            const type = objTypes[Math.floor(Math.random() * objTypes.length)];
+            const obj = document.createElement('div');
+            obj.classList.add('obj');
+            Object.assign(obj.style, {
+                width: `${type.width}px`,
+                height: `${type.height}px`,
+                backgroundImage: `url('${type.img}')`,
+                backgroundSize: 'cover',
+                position: 'absolute',
+                bottom: '10px',
+                left: '800px'
+            });
+            obj.dataset.speed = objSpeed;
+            gameContainer.appendChild(obj);
+            objList.push(obj);
+        }
+
+        function updateBull() {
+            if (isJumping) {
+                bullY += jumpVelocity;
+                jumpVelocity -= GRAVITY;
+
+                if (bullY <= 10) {
+                    bullY = 10;
+                    jumpVelocity = 0;
+                    isJumping = false;
+                    isFalling = false;
+                }
+                bull.style.bottom = `${bullY}px`;
+            }
+        }
+
+
+        function checkCollision(obj) {
+            const bullRect = bull.getBoundingClientRect();
+            const objRect = obj.getBoundingClientRect();
+            return (
+                bullRect.bottom > objRect.top &&
+                bullRect.top < objRect.bottom &&
+                bullRect.right > objRect.left &&
+                bullRect.left < objRect.right
+            );
+        }
+
+        function updateGame() {
+            if (!isGameRunning) return;
+
+            if (bullY < 10) {
+                bullY = 10;
+                isJumping = false;
+                isFalling = false;
+                bull.style.bottom = `${bullY}px`;
+            }
+
+            updateBull();
+
+            // Move blocos de fundo
+            for (let i = bgBlocks.length - 1; i >= 0; i--) {
+                const block = bgBlocks[i];
+                let left = parseFloat(block.style.left) - objSpeed * 1.5;
+                block.style.left = `${left}px`;
+
+                if (left <= -800) {
+                    block.remove();
+                    bgBlocks.splice(i, 1);
+                }
+            }
+
+            const lastBg = bgBlocks[bgBlocks.length - 1];
+            const lastBgLeft = lastBg ? parseFloat(lastBg.style.left) : null;
+            const lastBgIndex = lastBg ? parseInt(lastBg.dataset.bgId) : null;
+
+            if (!lastBg || lastBgLeft <= 0) {
+                const newLeft = lastBg ? parseFloat(lastBg.style.left) + 800 : 800;
+
+                if (waitingForBgTransition && lastBgIndex !== currentBgIndex && lastBgLeft <= 0) {
+                    createBgBlock(backgrounds[currentBgIndex], newLeft, currentBgIndex);
+                    waitingForBgTransition = false;
+                }
+
+                else if (lastBgIndex === currentBgIndex) {
+                    createBgBlock(backgrounds[currentBgIndex], newLeft, currentBgIndex);
+                }
+            }
+
+            // Spawn de objs
+            const lastObj = objList[objList.length - 1];
+            const canCreate = !lastObj || parseFloat(lastObj.style.left) < (800 - MIN_OBJ_SPACING);
+            if (canCreate && Math.random() < 0.01) {
+                createObj();
+            }
+
+            for (let i = objList.length - 1; i >= 0; i--) {
+                const obj = objList[i];
+                let left = parseFloat(obj.style.left) - objSpeed;
+                obj.style.left = `${left}px`;
+
+                if (checkCollision(obj)) return gameOver();
+
+                if (left < -100) {
+                    obj.remove();
+                    objList.splice(i, 1);
+                    score++;
+                    scoreSpan.textContent = score;
+
+                    if (score >= nextBgChange) {
+                        currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
+                        nextBgChange += 10;
+                        waitingForBgTransition = true;
+                        playSound(audioNextBg);
+                    } else {
+                        playSound(audioPoint);
+                    }
+
+                    if (score % 5 === 0 && objSpeed < MAX_OBJ_SPEED) {
+                        objSpeed += 0.05;
+                        setOverlayOpacity()
+                    }
+                }
+            }
+
+            gameLoopId = requestAnimationFrame(updateGame);
+        }
+
+        function startGame() {
+            if (!isGameRunning) {
+                isGameRunning = true;
+                score = 0;
+                objSpeed = 4;
+                bgPosition = 0;
+                currentBgIndex = 0;
+                nextBgChange = 10;
+
+                bullY = 10;
+                isJumping = false;
+                isFalling = false;
+                jumpHold = false;
+                jumpVelocity = 0;
+                bull.style.bottom = `${bullY}px`;
+                bull.classList.remove('hidden');
+                
+                objList.forEach(c => c.remove());
+                objList = [];
+
+                bgBlocks.forEach(block => block.remove());
+                bgBlocks = [];
+                createBgBlock(backgrounds[0], 0);
+                createBgBlock(backgrounds[0], 800);
+                setOverlayOpacity()
+                scoreSpan.textContent = score;
+                scoreBox.style.display = 'flex';
+                startBtn.textContent = 'Reiniciar';
+
+                playSound(audioStart);
+                audioAmbience.play();
+
+                requestAnimationFrame(updateGame);
+            } else {
+                isGameRunning = false;
+                cancelAnimationFrame(gameLoopId);
+                startGame();
+            }
+        }
+
+
+        function gameOver() {
+            isGameRunning = false;
+            cancelAnimationFrame(gameLoopId);
+            if (score > bestScore) {
+                bestScore = score;
+                localStorage.setItem('bestScore', bestScore);
+            }
+            bestScoreSpan.textContent = bestScore;
+            startBtn.textContent = 'Reiniciar';
+            audioAmbience.pause();
+            playSound(audioCrash);
+            audioCrash.play();
+        }
+
+        // Controles
+        document.addEventListener('keydown', (e) => {
+            if ((e.code === 'Space' || e.code === 'ArrowUp') && isGameRunning) {
+                e.preventDefault();
+                if (!isJumping && !isFalling && bullY === 10) {
+                    isJumping = true;
+                    jumpHold = true;
+                    jumpVelocity = INITIAL_JUMP_VELOCITY;
+                    playSound(audioJump);
+                }
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.code === 'Space' || e.code === 'ArrowUp') {
+                jumpHold = false;
+                isFalling = true;
+            }
+        });
+
+        function showCutsceneOnce() {
+            const cutscene = document.getElementById('cutscene');
+            const video = document.getElementById('cutsceneVideo');
+            const skipBtn = document.getElementById('skipBtn');
+
+            cutscene.classList.remove('d-none');
+            video.play();
+            cutsceneAlreadyPlayed = true;
+
+            video.addEventListener('ended', handleEnd, { once: true });
+            skipBtn.addEventListener('click', handleEnd, { once: true });
+
+            function handleEnd() {
+                video.pause();
+                cutscene.classList.add('d-none');
+                startGame();
+            }
+        }
+
+        startBtn.addEventListener('click', () => {
+            if (!cutsceneAlreadyPlayed) {
+                showCutsceneOnce();
+            } else {
+                startGame();
+            }
+        });
+
+        // Cutscene móvel
+        (() => {
+            const cutscene = document.getElementById('cutscene');
+            const video = document.getElementById('cutsceneVideo');
+            let videoElementoAtual = null;
+
+            function moverCutscene(e) {
+                if (!videoElementoAtual) return;
+                const x = (e.clientX / window.innerWidth - 0.5) * 5;
+                const y = (e.clientY / window.innerHeight - 0.5) * 5;
+                videoElementoAtual.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            const observer = new MutationObserver(() => {
+                const isVisible = !cutscene.classList.contains('d-none');
+                if (isVisible) {
+                    videoElementoAtual = video;
+                    window.addEventListener('mousemove', moverCutscene);
+                } else if (videoElementoAtual) {
+                    window.removeEventListener('mousemove', moverCutscene);
+                    videoElementoAtual.style.transform = 'translate(0, 0)';
+                    videoElementoAtual = null;
+                }
+            });
+
+            observer.observe(cutscene, { attributes: true });
+        })();
     </script>
 </body>
 
