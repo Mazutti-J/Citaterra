@@ -7,16 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="imagens/logo/logo_campo_cidade.png">
-    <title>Principal - Citaterra</title>
+    <link rel="icon" type="image/x-icon" href="../imagens/logo/logo_campo_cidade.png">
+    <title>Artigos - Citaterra</title>
 </head>
 
 <body>
     <div class="parallax-bg" id="parallax"></div>
+    <canvas id="fogos"></canvas>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
         <div class="navbar-brand mb-0 row">
             <div style="padding-left: 50px;" class="col-md-4">
-                <img src="imagens/logo/navbar_logo.png" />
+                <img src="../imagens/logo/navbar_logo.png" />
                 <a style="text-decoration:none">CITA</a>
                 <a class="title2" style="text-decoration:none">TERRA</a>
             </div>
@@ -28,92 +29,182 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link disabled" href="#">Principal</a>
+                    <a class="nav-link" href="../index.html">Principal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="artigos/index.html">Artigos</a>
+                    <a class="nav-link disabled" href="#">Artigos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="jogos/index.html">Jogo</a>
+                    <a class="nav-link" href="../jogos/index.html">Jogo</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Ambiente
+                    </a>
+                    <ul class="dropdown-menu text-center" tabindex="3">
+                        <!-- Player 1 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 1 - 
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-classico.mp3" loop></audio>
+                        </li>
+                        <!-- Player 2 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 2 - 
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-instrumental.mp3" loop></audio>
+                        </li>
+                        <!-- Player 3 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 3 - 
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-bossa-nova.mp3" loop></audio>
+                        </li>
+                        <!-- Player 4 -->
+                        <li class="custom-player dropdown-item">
+                            <a class="play-button" style="text-decoration:none">Faixa 4 - 
+                                <i class="bi bi-play-circle-fill bi-button"></i>
+                            </a>
+                            <audio src="../sons/músicas/leitura-ambiente-instrumental-2.mp3" loop></audio>
+                        </li>
+                        <li><a id="botao-fogos" class="dropdown-item" style="text-decoration:none">Ativar efeitos</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header>
-        <div class="card text-center text-bg-dark">
-            <div class="card-header body-hero">
-                <img class="card-img" src="imagens/banner/banner-1.png" />
-                <div class="janela-moldura"></div>
-            </div>
-            <div class="container">
-                <div class="row flex-row-reverse">
-                    <div class="col-lg-8 card-body">
-                        <h2 class="text-center">"Do chão batido ao asfalto, os encontros e descompassos de dois mundos
-                            em um só país."
-                        </h2>
-                        <h5 class="text-center title2">Nesse site você encontrará:</h5>
-                    </div>
-                    <div>
-                        <p class="badge bg-secondary">Cultura</p>
-                        <p class="badge bg-secondary">Território</p>
-                        <p class="badge bg-secondary">Tradição</p>
-                        <p class="badge bg-secondary">Modernidade</p>
-                        <p class="badge bg-secondary">Comunidade</p>
-                    </div>
+    <header class="container text-center body-hero">
+        <div class="container my-5 text-bg-dark; border-radius: 250%">
+            <div class="card row flex-row-reverse text-bg-dark">
+                <div class="col-lg-8 card-body">
+                    <h1 class="card-title title2">O Mundo Que Nos Move</h1>
+                    <p class="card-text">Do nascer do sol à luz dos postes, pulsa um país que vive em ritmos diferentes,
+                        e que, mesmo assim, dança junto.</p>
                 </div>
             </div>
+        </div>
         </div>
     </header>
 
-    <main class="container mt-5" data-bs-theme="dark">
-        <div class="card text-center">
-            <div class="card-header">
-                <h4 style="padding-top: 10px;;">Qual é a real intenção por trás dessas páginas?</h4>
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>Mais do que divergir, buscamos mostrar as convergências e os fios sutis que unem o que parecia
-                        oposto.</p>
-                </blockquote>
-                <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Ver
-                    mais</button>
-            </div>
-        </div>
+    <main class="container mt-5">
+        <h2 class="text-center">➤ Artigos ➤</h2>
         <div class="row body-hero">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="row card-body">
-                        <div class="col-sm-6">
-                            <h5 class="card-title title1">Artigos</h5>
-                            <p class="card-text">Quer saber mais? Explore e aprofunde-se com textos curtos e acessíveis
-                                sobre o que aqui se apresenta.
-                            </p>
-                            <a type="button" class="btn btn-outline-secondary" href="artigos/index.html">Abrir seção
-                                completa</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="imagens/modals/icon_artigos.png"
-                                style="width: 100%; height: auto; max-height: 250px; object-fit: contain;"
-                                alt="Banner da página" />
-                        </div>
+            <!-- 1 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_1.png" class="card-img-top"
+                        alt="Banner representação das culturas e produção do interior" />
+                    <div class="card-body">
+                        <h5 class="card-title">Interior, Produção e Cultura
+                        </h5>
+                        <p class="card-text">
+                            A vida no campo começa cedo, moldada por trabalho, por saberes e pelas festas que atravessam
+                            gerações.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
+
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="row card-body">
-                        <div class="col-sm-6">
-                            <h5 class="card-title title1">Jogo</h5>
-                            <p class="card-text">Que tal um desafio? Jogue nosso despretensioso jogo e divirta-se com uma narrativa
-                                simples, porém inesperada.</p>
-                            <a type="button" class="btn btn-outline-secondary" href="jogos/index.html">Abrir seção completa</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <img src="imagens/modals/icon_jogo.png"
-                                style="width: 100%; height: auto; max-height: 250px; object-fit: contain;"
-                                alt="Banner da página" />
-                        </div>
+            <!-- 2 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_2.png" class="card-img-top"
+                        alt="Banner de paisagens brasileiras" />
+                    <div class="card-body">
+                        <h5 class="card-title">O Mosaico Citadino
+                        </h5>
+                        <p class="card-text">
+                            Na cidade, contrastes se encontram entre o concreto, pela cultura, assim refletindo a rotina
+                            de milhões de brasileiros.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_3.png" class="card-img-top"
+                        alt="Banner de veículos do ciclo econômico" />
+                    <div class="card-body">
+                        <h5 class="card-title">Dois Agentes em Passos Largos
+                        </h5>
+                        <p class="card-text">
+                            Campo e cidade seguem trajetórias distintas, mas suas constantes trocas movem o país em
+                            harmonia.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-top: 50px;" class="row">
+            <!-- 4 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_4.png" class="card-img-top"
+                        alt="Banner representação de diversos instrumentos musicais" />
+                    <div class="card-body">
+                        <h5 class="card-title">Os Entrelaços Musicais
+                        </h5>
+                        <p class="card-text">
+                            A música brasileira uniu o campo à cidade, levando ritmos rurais aos centros urbanos sem
+                            perder sua essência.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal4"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_5.png" class="card-img-top"
+                        alt="Banner representação de múltiplas culturas juninas" />
+                    <div class="card-body">
+                        <h5 class="card-title">A Célebre Celebração Conjunta
+                        </h5>
+                        <p class="card-text">
+                            As Festas Juninas transformaram a cidade, mantendo viva a cultura do campo em meio ao
+                            concreto.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal5"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="col-md-4">
+                <div class="card" data-bs-theme="dark">
+                    <img src="../imagens/modals/modal_6.png" class="card-img-top"
+                        alt="Banner representação de parte da história brasileira" />
+                    <div class="card-body">
+                        <h5 class="card-title">O Histórico Equilíbrio Necessário
+                        </h5>
+                        <p class="card-text">
+                            O caminho que levou a mecanização ao campo, sendo uma modernização que garantiu alimento às
+                            cidades.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal6"
+                            onclick="dispararFogos()">Ver
+                            mais</button>
                     </div>
                 </div>
             </div>
@@ -122,45 +213,285 @@
 
     <!-- Modal-1 -->
     <div class="modal" id="modal1" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            A vida no campo começa cedo, moldada por trabalho, por saberes e pelas festas que atravessam gerações.
+            Interior, Produção e Cultura.
+            No campo, antes mesmo do galo cantar, o trabalho começa. De fato, o setor agropecuário emprega cerca de 28 milhões de pessoas, mais de 26% da força de trabalho nacional, segundo dados recentes do IBGE. A agricultura moderna alia tradição e inovação, pois máquinas com precisão de GPS e drones dividem espaço com saberes passados de geração em geração.
+            As festas guardam essa conexão entre produção e cultura. Nas festas juninas, comidas rurais, como a pamonha, o bolo de fubá e o pé de moleque encontram ritmo na sanfona, no vaqueiro e em modas como o vanerão, o rasqueado e o bugio. reflete a identidade das regiões, com chapéus de couro, botas e roupas encorpadas que protegem do sol, da poeira e do trabalho no campo.
+            A arquitetura rural, por sua vez, tende à funcionalidade, com galpões amplos, cercas de madeira, silos e casas térreas que resistem ao tempo. Ainda assim, elementos históricos, tal qual taipa, cobertura de sapé e estilo enxaimel persistem, especialmente em áreas com forte herança étnica, como no sul do país.
+            Apesar dos avanços tecnológicos, o acesso à internet nas áreas rurais ainda carrega consigo obstáculos. Visto que, 81% dos domicílios rurais possuem acesso, mas apenas 37% integram cobertura total de conectividade 4G/5G, o que limita o uso completo de plataformas educacionais, serviços financeiros e comércio digital.
+            O terreno mostra, portanto, contrastes naturais e tecnológicos, onde a tradição e a modernidade coexistem. O trabalho que sustenta o país convive com rituais culturais que preservam memória e identidade.
+         </p>
         <div class="modal-dialog modal-lg elemento-movel">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Apontamentos Iniciais</h5>
+                    <h5 class="modal-title">Interior, Produção e Cultura</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div style="display:none;" id="meuParagrafo">
-                        Qual é a real intenção por trás dessas páginas?
-                        Mais do que divergir, buscamos mostrar as convergências e os fios sutis que unem o que parecia oposto.
-                        Apontamentos Iniciais
-                        Este espaço foi concebido para acolher pessoas de todas as idades e interesses, reunindo conteúdos que celebram a diversidade cultural do Brasil e as diferentes formas de expressão humana. Com textos que exploram temas do campo à cidade, da história à contemporaneidade, o site busca promover um olhar atento e plural sobre o cotidiano e suas transformações.
-                        As publicações aqui presentes foram desenvolvidas a partir de pesquisas realizadas com base em materiais amplamente divulgados, oriundos de instituições reconhecidas e estudos de acesso público. Embora não se apresentem como fontes primárias, os artigos foram elaborados com responsabilidade, seriedade e compromisso com o conhecimento acessível.
-                        Para além da leitura, o visitante encontrará neste espaço criações artísticas e experiências interativas que transitam entre o inusitado e o divertido. Ilustrações, composições musicais e uma narrativa jogável de proposta leve e humor desconcertante convidam o público a explorar também o lado lúdico da cultura.
-                        Entre a informação e a imaginação, o site se propõe como uma travessia livre por expressões e ideias que não cabem em rótulos. Um convite aberto à curiosidade, à reflexão e ao encantamento para quem deseja conhecer, brincar ou apenas olhar o mundo por outras lentes.
-                    </div>
-                    <div>
-                        <a id="ler"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                        <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
                         <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
-                    </div>
-                        <p>Este espaço foi concebido para acolher pessoas de todas as idades e interesses, reunindo conteúdos que celebram a
-                            diversidade cultural do Brasil e as diferentes formas de expressão humana. Com textos que exploram temas do campo à
-                            cidade, da história à contemporaneidade, o site busca promover um olhar atento e plural sobre o cotidiano e suas
-                            transformações.</p>
-                        <p>As publicações aqui presentes foram desenvolvidas a partir de pesquisas realizadas com base em materiais amplamente
-                            divulgados, oriundos de instituições reconhecidas e estudos de acesso público. Embora não se apresentem como fontes
-                            primárias, os artigos foram elaborados com responsabilidade, seriedade e compromisso com o conhecimento acessível.
-                        </p>
-                        <p>Para além da leitura, o visitante encontrará neste espaço criações artísticas e experiências interativas que
-                            transitam entre o inusitado e o divertido. Ilustrações, composições musicais e uma narrativa jogável de proposta
-                            leve e humor desconcertante convidam o público a explorar também o lado lúdico da cultura.</p>
-                        <p>Entre a informação e a imaginação, o site se propõe como uma travessia livre por expressões e ideias que não cabem em
-                            rótulos. Um convite aberto à curiosidade, à reflexão e ao encantamento para quem deseja conhecer, brincar ou apenas
-                            olhar o mundo por outras lentes.</p>
+                    <p> No campo, antes mesmo do galo cantar, o trabalho começa. De fato, o setor agropecuário emprega
+                        cerca de 28 milhões de pessoas, mais de 26% da força de trabalho nacional, segundo dados
+                        recentes do IBGE. A agricultura moderna alia tradição e inovação, pois máquinas com precisão de
+                        GPS e drones dividem espaço com saberes passados de geração em geração. </p>
+                    <p> As festas guardam essa conexão entre produção e cultura. Nas festas juninas, comidas rurais,
+                        como a pamonha, o bolo de fubá e o pé de moleque encontram ritmo na sanfona, no vaqueiro e em
+                        modas como o vanerão, o rasqueado e o bugio. reflete a identidade das regiões, com chapéus de
+                        couro, botas e roupas encorpadas que protegem do sol, da poeira e do trabalho no campo. </p>
+                    <p> A arquitetura rural, por sua vez, tende à funcionalidade, com galpões amplos, cercas de madeira,
+                        silos e casas térreas que resistem ao tempo. Ainda assim, elementos históricos, tal qual taipa,
+                        cobertura de sapé e estilo enxaimel persistem, especialmente em áreas com forte herança étnica,
+                        como no sul do país. </p>
+                    <p> Apesar dos avanços tecnológicos, o acesso à internet nas áreas rurais ainda carrega consigo
+                        obstáculos. Visto que, 81% dos domicílios rurais possuem acesso, mas apenas 37% integram
+                        cobertura total de conectividade 4G/5G, o que limita o uso completo de plataformas educacionais,
+                        serviços financeiros e comércio digital. </p>
+                    <p> O terreno mostra, portanto, contrastes naturais e tecnológicos,
+                        onde a tradição e a modernidade coexistem. O trabalho que sustenta o país convive com rituais
+                        culturais que preservam memória e identidade. </p>
+                    <img src="../imagens/modals/modal_1.png" class="img-fluid w-100"
+                        alt="Banner representação das culturas e produção do interior" />
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal-2 -->
+    <div class="modal " id="modal2" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            Na cidade, contrastes se encontram entre o concreto, pela cultura, assim refletindo a rotina de milhões de brasileiros.
+            O Mosaico Citadino.
+            Na cidade, o ritmo é acelerado e um mosaico de hábitos, sons e sabores urbanos é consumido diariamente. A taxa de emprego urbana hoje está em cerca de 57% da força de trabalho, com desemprego em torno de 6,5%, o que indica um mercado relativamente aquecido, embora persistam 38% de empregos informais.
+            Coexistem edifícios modernos, centros históricos, favelas e bairros planejados. A infraestrutura varia entre ruas asfaltadas, ciclovias, praças arborizadas, corredores de ônibus e metrô, mas também áreas precárias que ainda sofrem com falta de saneamento e acesso desigual aos serviços.
+            As festas nas cidades são expressão de identidade urbana e cultural. No Rio de Janeiro, o samba e o pagode ainda que presentes, deixaram de ser trilha sonora cotidiana, sobrepostos nas periferias por um novo fenômeno cultural, o funk carioca. Ainda assim, o Carnaval continua transformando as ruas em palcos coloridos de cultura popular. Em São Paulo, o rap ecoa nas periferias e palcos independentes.
+            Tecnologia e mobilidade moldam o cotidiano urbano. As pessoas utilizam transporte público, apps de mobilidade e internet em 94% dos lares urbanos, com banda larga fixa disponível para 86,9% dos domicílios. A conectividade facilita o trabalho remoto, a educação a distância e o comércio digital, mas também expõe desafios ligados à desigualdade de acesso.
+            A comida urbana reflete a mistura de culturas, com food trucks, feiras, restaurantes étnicos, quitandas regionais se misturam ao churrasco, pizza, comida nordestina ou mineira, sendo um retrato da cidade como receptáculo de diversidade.
+        </p>
+        <div class="modal-dialog modal-lg elemento-movel">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">O Mosaico Citadino</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                    <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
+                    <p>
+                        Na cidade, o ritmo é acelerado e um mosaico de hábitos, sons e sabores urbanos é consumido
+                        diariamente. A taxa de emprego urbana hoje está em cerca de 57% da força de trabalho, com
+                        desemprego em torno de 6,5%, o que indica um mercado relativamente aquecido, embora persistam
+                        38% de empregos informais. </p>
+                    <p> Coexistem edifícios modernos, centros históricos, favelas e bairros planejados. A infraestrutura
+                        varia entre ruas asfaltadas, ciclovias, praças arborizadas, corredores de ônibus e metrô, mas
+                        também áreas precárias que ainda sofrem com falta de saneamento e acesso desigual aos serviços.</p>
+                    <p>As festas nas cidades são expressão de identidade urbana e cultural. No Rio de Janeiro, o samba e
+                        o pagode ainda que presentes, deixaram de ser trilha sonora cotidiana,
+                        sobrepostos nas periferias por um novo fenômeno cultural, o funk carioca. Ainda assim, o
+                        Carnaval continua transformando as ruas em palcos coloridos de cultura popular. Em São Paulo, o
+                        rap ecoa nas periferias e palcos independentes. </p>
+                    <p>Tecnologia e mobilidade moldam o cotidiano urbano. As pessoas utilizam transporte público, apps
+                        de mobilidade e internet em 94% dos lares urbanos, com banda larga fixa disponível para 86,9%
+                        dos domicílios. A conectividade facilita o trabalho remoto, a educação a distância e o comércio
+                        digital, mas também expõe desafios ligados à desigualdade de acesso. </p>
+                    <p>A comida urbana reflete a mistura de culturas, com food trucks, feiras, restaurantes étnicos,
+                        quitandas regionais se misturam ao churrasco, pizza, comida nordestina ou mineira, sendo um
+                        retrato da cidade como receptáculo de diversidade. </p>
+                    <img src="../imagens/modals/modal_2.png" class="img-fluid w-100"
+                        alt="Banner de paisagens brasileiras" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-3 -->
+    <div class="modal " id="modal3" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            Campo e cidade seguem trajetórias distintas, mas suas constantes trocas movem o país em harmonia.
+            Dois agentes em passos largos.
+            Há uma relação de interdependência entre campo e cidade. O primeiro produz alimentos, matérias-primas e cultura, enquanto o segundo oferece serviços, inovação e mercado.
+            O campo garante riquezas rurais, na forma de grãos, carne, leite e biocombustíveis, produtos que abastecem a indústria e alimentam a população urbana. Enquanto a cidade fornece estrutura técnica, ensino, centros de pesquisa e acesso ao consumo.
+            Culturalmente, essa conexão se manifesta nas festas, onde o urbano adota festas juninas com decoração urbana, no campo se incorpora tecnologia em eventos, por vezes com som, internet, live streaming e, a vestimenta tradicional ganha ruas e confraternizações urbanas.
+            Em feiras e mercados urbanos, comidas de roça como pamonha, cuscuz ou queijo chegam ao consumidor urbano. Por outro lado, ideias de sustentabilidade e agroecologia nascem na cidade e migram para o campo.
+            Em termos históricos, a urbanização acelerou após a Segunda Guerra, quando o êxodo rural levou cerca de 84% da população ao meio urbano até 2023. Mesmo assim, o campo continua vital.
+            forma-se, assim, uma rede viva, onde conhecimento técnico do campo precisa da internet urbana, infraestrutura e economia para prosperar, e a urbe descobre no campo suas raízes culturais e alimentos que mantêm seus habitantes.
+        </p>
+        <div class="modal-dialog modal-lg elemento-movel">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Dois agentes em passos largos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                    <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
+                    <p>
+                        Há uma relação de interdependência entre campo e cidade. O primeiro produz alimentos,
+                        matérias-primas e cultura, enquanto o segundo oferece serviços, inovação e mercado. </p>
+                    <p>O campo garante riquezas rurais, na forma de grãos, carne, leite e biocombustíveis, produtos que
+                        abastecem a indústria e alimentam a população urbana. Enquanto a cidade fornece estrutura
+                        técnica, ensino, centros de pesquisa e acesso ao consumo. </p>
+                    <p>Culturalmente, essa conexão se manifesta nas festas, onde o urbano adota festas juninas com
+                        decoração urbana, no campo se incorpora tecnologia em eventos, por vezes com som, internet, live
+                        streaming e, a vestimenta tradicional ganha ruas e confraternizações urbanas. </p>
+                    <p>Em feiras e mercados urbanos, comidas de roça como pamonha, cuscuz ou queijo chegam ao consumidor
+                        urbano. Por outro lado, ideias de sustentabilidade e agroecologia nascem na cidade e migram para
+                        o campo. </p>
+                    <p>Em termos históricos, a urbanização acelerou após a Segunda Guerra, quando o êxodo rural levou
+                        cerca de 84% da população ao meio urbano até 2023. Mesmo assim, o campo continua vital. </p>
+                    <p>forma-se, assim, uma rede viva, onde conhecimento técnico do campo precisa da internet urbana,
+                        infraestrutura e economia para prosperar, e a urbe descobre no campo suas raízes culturais e
+                        alimentos que mantêm seus habitantes. </p>
+                    <img src="../imagens/modals/modal_3.png" class="img-fluid w-100"
+                        alt="Banner de veículos do ciclo econômico" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-4 -->
+    <div class="modal " id="modal4" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            A música brasileira uniu o campo à cidade, levando ritmos rurais aos centros urbanos sem perder sua essência.
+            Os Entrelaços Musicais.
+            A música brasileira sempre revelou uma intensa conexão entre o campo e a cidade. Durante o período colonial, expressões como o lundu, a congada e a moda de viola eram vividas em espaços abertos, reunindo comunidades em rituais de canto, dança e teatralidade. Essas manifestações carregavam a essência do interior e eram fundamentais para a construção de uma identidade coletiva.
+            Com o avanço do século XX e a popularização do rádio, essas expressões migraram para o meio urbano. Através do microfone, o sertão entrou nas casas da cidade, levando consigo temas como a saudade, a religiosidade e as agruras da seca. Um dos estilos mais marcantes, com instrumentos como sanfona, triângulo e zabumba, manteve sua essência rústica mesmo ao alcançar grandes centros.
+            Ao mesmo tempo, ritmos híbridos, formados a partir da influência da polca europeia, do xote e de elementos africanos, evoluíram da rua para os salões, ganhando status cultural. A cidade não apenas os absorveu, mas os enalteceu como parte da identidade nacional.
+            Mais adiante, a estética da música rural passou por um processo de adaptação ao ambiente urbano. A sonoridade elétrica, as novas mídias e o consumo urbano transformaram antigos estilos, mas sem apagar suas raízes. Essa reinterpretação serviu de ponte entre gerações de migrantes e seus valores de origem.
+            Por fim, movimentos culturais urbanos resgataram elementos do campo e os incorporaram à linguagem musical moderna. Assim, a música tornou-se mais do que entretenimento. Ela passou a ser também um reflexo e um motor de transformação social, narrando histórias, aproximando mundos e afirmando o papel do campo como fonte vital de cultura na vida urbana.
+        </p>
+        <div class="modal-dialog modal-lg elemento-movel">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Os Entrelaços Musicais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                    <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
+                    <p> A música brasileira sempre revelou uma intensa conexão entre o campo e a cidade. Durante o
+                        período colonial, expressões como o lundu, a congada e a moda de viola eram vividas em espaços
+                        abertos, reunindo comunidades em rituais de canto, dança e teatralidade. Essas manifestações
+                        carregavam a essência do interior e eram fundamentais para a construção de uma identidade
+                        coletiva. </p>
+                    <p> Com o avanço do século XX e a popularização do rádio, essas expressões migraram para o meio
+                        urbano. Através do microfone, o sertão entrou nas casas da cidade, levando consigo temas como a
+                        saudade, a religiosidade e as agruras da seca. Um dos estilos mais marcantes, com instrumentos
+                        como sanfona, triângulo e zabumba, manteve sua essência rústica mesmo ao alcançar grandes
+                        centros. </p>
+                    <p> Ao mesmo tempo, ritmos híbridos, formados a partir da influência da polca europeia, do xote e de
+                        elementos africanos, evoluíram da rua para os salões, ganhando status cultural. A cidade não
+                        apenas os absorveu, mas os enalteceu como parte da identidade nacional. </p>
+                    <p> Mais adiante, a estética da música rural passou por um processo de adaptação ao ambiente urbano.
+                        A sonoridade elétrica, as novas mídias e o consumo urbano transformaram antigos estilos, mas sem
+                        apagar suas raízes. Essa reinterpretação serviu de ponte entre gerações de migrantes e seus
+                        valores de origem. </p>
+                    <p> Por fim, movimentos culturais urbanos resgataram elementos do campo e os incorporaram à
+                        linguagem
+                        musical moderna. Assim, a música tornou-se mais do que entretenimento. Ela passou a ser também
+                        um reflexo e um motor de transformação social, narrando histórias, aproximando mundos e
+                        afirmando o papel do campo como fonte vital de cultura na vida urbana. </p>
+                    <img src="../imagens/modals/modal_4.png" class="img-fluid w-100"
+                        alt="Banner representação de diversos instrumentos musicais" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-5 -->
+    <div class="modal " id="modal5" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            As Festas Juninas transformaram a cidade, mantendo viva a cultura do campo em meio ao concreto.
+            A Célebre Celebração Conjunta.
+            As Festas Juninas chegaram ao Brasil no século XVI, trazidas pelos portugueses como parte de rituais europeus de solstício. Com o tempo, essas tradições foram adaptadas à realidade local, ganhando novos sentidos e elementos. No Nordeste, por exemplo, as celebrações dedicadas a São João incorporaram a colheita do milho, a montagem de fogueiras e uma culinária própria, com pratos como pamonha, canjica e pé-de-moleque.
+            Durante o século XX, com o crescimento das cidades, essas festas migraram do campo para o ambiente urbano. Arraiais passaram a ocupar escolas, praças e clubes. A tradicional quadrilha foi adaptada com novos trajes, personagens como o noivo e a noiva, além de ritmos como o forró e sua vertente universitária. Nesse contexto, artistas como Luiz Gonzaga ganharam destaque, transmitindo por meio da música os valores e os símbolos do sertão a um público cada vez mais urbano.
+            Mesmo transformadas, as Festas Juninas mantêm uma forte ligação com o campo. Em cidades como Campina Grande e Caruaru, os eventos chegam a reunir milhões de pessoas, movimentando a economia e atraindo turistas de diversas regiões. Essa celebração é ao mesmo tempo religiosa, folclórica e popular, reunindo tradições que expressam a diversidade cultural brasileira.
+            Além do aspecto festivo, essas manifestações representam uma economia simbólica importante, que integra cidade e campo. A moda, a música, a culinária e até o artesanato revelam como os valores rurais continuam presentes no cotidiano urbano, moldando identidades e reafirmando vínculos históricos. Ao unir tradição e renovação, essas festas mostram que o campo não é apenas fornecedor de alimentos, mas também um criador de símbolos e significados compartilhados.
+        </p>
+        <div class="modal-dialog modal-lg elemento-movel">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">A Célebre Celebração Conjunta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                    <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
+                    <p> As Festas Juninas chegaram ao Brasil no século XVI, trazidas pelos portugueses como parte de
+                        rituais europeus de solstício. Com o tempo, essas tradições foram adaptadas à realidade local,
+                        ganhando novos sentidos e elementos. No Nordeste, por exemplo, as celebrações dedicadas a São
+                        João incorporaram a colheita do milho, a montagem de fogueiras e uma culinária própria, com
+                        pratos como pamonha, canjica e pé-de-moleque.</p>
+                    <p> Durante o século XX, com o crescimento das cidades, essas festas migraram do campo para o
+                        ambiente urbano. Arraiais passaram a ocupar escolas, praças e clubes. A tradicional quadrilha
+                        foi adaptada com novos trajes, personagens como o noivo e a noiva, além de ritmos como o forró e
+                        sua vertente universitária. Nesse contexto, artistas como Luiz Gonzaga ganharam destaque,
+                        transmitindo por meio da música os valores e os símbolos do sertão a um público cada vez mais
+                        urbano.</p>
+                    <p> Mesmo transformadas, as Festas Juninas mantêm uma forte ligação com o campo. Em cidades como
+                        Campina Grande e Caruaru, os eventos chegam a reunir milhões de pessoas, movimentando a economia
+                        e atraindo turistas de diversas regiões. Essa celebração é ao mesmo tempo religiosa, folclórica
+                        e popular, reunindo tradições que expressam a diversidade cultural brasileira.</p>
+                    <p> Além do aspecto festivo, essas manifestações representam uma economia simbólica importante, que
+                        integra cidade e campo. A moda, a música, a culinária e até o artesanato revelam como os valores
+                        rurais continuam presentes no cotidiano urbano, moldando identidades e reafirmando vínculos
+                        históricos. Ao unir tradição e renovação, essas festas mostram que o campo não é apenas
+                        fornecedor de alimentos, mas também um criador de símbolos e significados compartilhados. </p>
+                    <img src="../imagens/modals/modal_5.png" class="img-fluid w-100"
+                        alt="Banner representação de múltiplas culturas juninas" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-6 -->
+    <div class="modal " id="modal6" tabindex="-1" data-bs-theme="dark">
+        <p style="display:none;">
+            O caminho que levou a mecanização ao campo, sendo uma modernização que garantiu alimento às cidades.
+            O Histórico Equilíbrio Necessário.
+            Entre as décadas de 1960 e 1980, o Brasil enfrentou um processo intenso de urbanização. O censo de 1980 mostrou que apenas um terço da população ainda vivia no campo. Esse êxodo pressionou as cidades, que precisaram lidar com a expansão desordenada, o aumento das desigualdades e a falta de infraestrutura adequada. Por outro lado, a produção rural permanecia pouco mecanizada, com apenas uma pequena parcela das propriedades utilizando tecnologia adequada. Além disso, muitos agricultores desconheciam as especificidades dos solos tropicais.
+            Diante desse cenário, o governo criou a Embrapa em 1973, como parte do Sistema Nacional de Pesquisa Agropecuária. A instituição investiu em programas como o Plano Nacional de Sementes, que contribuiu para o desenvolvimento de cultivares adaptadas ao clima e ao solo brasileiros. Além disso, técnicas de correção do solo, como o uso de calcário e fósforo, e a introdução de leguminosas, ampliaram a produtividade no cerrado.
+            Entre 1975 e 2017, a produção de grãos aumentou de forma expressiva, passando de 38 para 236 milhões de toneladas. Embora a área plantada tenha dobrado, o crescimento deveu-se, principalmente, ao avanço tecnológico. A pecuária também foi modernizada, triplicando sua produção por meio da intensificação.
+            Esses avanços tornaram o agronegócio um dos principais pilares da economia nacional, mas também trouxeram novos desafios. As cidades passaram a depender mais do campo para o abastecimento, e o meio rural, por sua vez, exigiu políticas que garantissem a conservação ambiental e a justiça social.
+            Assim, o equilíbrio entre o campo e a cidade continua sendo uma tarefa contínua. A modernização rural só é possível quando acompanhada por ações que promovam sustentabilidade, inovação e uma distribuição mais justa dos benefícios do progresso.
+        </p>
+        <div class="modal-dialog modal-lg elemento-movel">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">O Histórico Equilíbrio Necessário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a class="leitor"><i class="bi bi-play-circle-fill bi-button"></i></a>
+                    <a id="parar"><i class="bi bi-stop-circle-fill bi-button"></i></a>
+                    <p> Entre as décadas de 1960 e 1980, o Brasil enfrentou um processo intenso de urbanização. O censo
+                        de 1980 mostrou que apenas um terço da população ainda vivia no campo. Esse êxodo pressionou as
+                        cidades, que precisaram lidar com a expansão desordenada, o aumento das desigualdades e a falta
+                        de infraestrutura adequada. Por outro lado, a produção rural permanecia pouco mecanizada, com
+                        apenas uma pequena parcela das propriedades utilizando tecnologia adequada. Além disso, muitos
+                        agricultores desconheciam as especificidades dos solos tropicais.</p>
+                    <p> Diante desse cenário, o governo criou a Embrapa em 1973, como parte do Sistema Nacional de
+                        Pesquisa Agropecuária. A instituição investiu em programas como o Plano Nacional de Sementes,
+                        que contribuiu para o desenvolvimento de cultivares adaptadas ao clima e ao solo brasileiros.
+                        Além disso, técnicas de correção do solo, como o uso de calcário e fósforo, e a introdução de
+                        leguminosas, ampliaram a produtividade no cerrado.</p>
+                    <p> Entre 1975 e 2017, a produção de grãos aumentou de forma expressiva, passando de 38 para 236
+                        milhões de toneladas. Embora a área plantada tenha dobrado, o crescimento deveu-se,
+                        principalmente, ao avanço tecnológico. A pecuária também foi modernizada, triplicando sua
+                        produção por meio da intensificação.</p>
+                    <p> Esses avanços tornaram o agronegócio um dos principais pilares da economia nacional, mas também
+                        trouxeram novos desafios. As cidades passaram a depender mais do campo para o abastecimento, e o
+                        meio rural, por sua vez, exigiu políticas que garantissem a conservação ambiental e a justiça
+                        social.</p>
+                    <p> Assim, o equilíbrio entre o campo e a cidade continua sendo uma tarefa contínua. A modernização
+                        rural só é possível quando acompanhada por ações que promovam sustentabilidade, inovação e uma
+                        distribuição mais justa dos benefícios do progresso. </p>
+                    <img src="../imagens/modals/modal_6.png" class="img-fluid w-100"
+                        alt="Banner representação de parte da história brasileira" />
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="container py-5">
         <h2>Feedback:</h2>
         <div>
@@ -184,44 +515,255 @@
             const scroll = window.scrollY;
             const parallax = document.querySelector('.parallax-bg');
             if (parallax) {
-                parallax.style.transform = `translateY(${scroll * -1.5}px)`;
+                parallax.style.transform = `translateY(${scroll * -0.4}px)`;
             }
         });
         //Elemento móvel
-        const imagem = document.querySelector('.elemento-movel');
+        let elementoAtual = null;
 
-        window.addEventListener('mousemove', (e) => {
+        function moverElemento(e) {
+            if (!elementoAtual) return;
+
             const x = (e.clientX / window.innerWidth - 0.5) * 5;
             const y = (e.clientY / window.innerHeight - 0.5) * 5;
+            elementoAtual.style.transform = `translate(${x}px, ${y}px)`;
+        }
 
-            imagem.style.transform = `translate(${x}px, ${y}px)`;
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('shown.bs.modal', function () {
+                const id = this.getAttribute('id');
+                elementoAtual = this.querySelector(`.elemento-movel`);
+
+                if (elementoAtual) {
+                    window.addEventListener('mousemove', moverElemento);
+                }
+            });
+
+            modal.addEventListener('hidden.bs.modal', function () {
+                if (elementoAtual) {
+                    window.removeEventListener('mousemove', moverElemento);
+                    elementoAtual.style.transform = 'translate(0, 0)';
+                    elementoAtual = null;
+                }
+            });
         });
         //Text-to-speech
-        const botaoLer = document.getElementById('ler');
-        const botaoParar = document.getElementById('parar');
         const sintese = window.speechSynthesis;
         let fala;
 
-        if (botaoLer && botaoParar) {
-            botaoLer.addEventListener('click', () => {
-                const texto = document.getElementById('meuParagrafo')?.textContent || '';
-                if (!('speechSynthesis' in window)) {
-                    alert("Seu navegador não suporta leitura text-to-speech.");
-                    return;
-                }
-
-                if (sintese.speaking) sintese.cancel();
-
-                fala = new SpeechSynthesisUtterance(texto);
-                sintese.speak(fala);
-            });
-
+        const botaoParar = document.getElementById('parar');
+        if (botaoParar) {
             botaoParar.addEventListener('click', () => {
                 if (sintese.speaking) {
                     sintese.cancel();
                 }
             });
         }
+
+        document.querySelectorAll('.leitor').forEach(botao => {
+            botao.addEventListener('click', () => {
+                if (!('speechSynthesis' in window)) {
+                    alert("Seu navegador não suporta leitura text-to-speech.");
+                    return;
+                }
+
+                if (fala && sintese.speaking) sintese.cancel();
+
+                const modal = botao.closest('.modal');
+                const paragrafo = modal?.querySelector('p');
+                const texto = paragrafo?.textContent || '';
+
+                if (texto) {
+                    fala = new SpeechSynthesisUtterance(texto);
+                    sintese.speak(fala);
+                }
+            });
+        });
+        //Player de música
+        const players = document.querySelectorAll(".custom-player");
+
+        players.forEach(player => {
+            const button = player.querySelector(".play-button");
+            const icon = button.querySelector("i");
+            const audio = player.querySelector("audio");
+
+            button.addEventListener("click", () => {
+                if (audio.paused) {
+                    players.forEach(otherPlayer => {
+                        const otherAudio = otherPlayer.querySelector("audio");
+                        const otherIcon = otherPlayer.querySelector("i");
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                            otherIcon.className = "bi bi-play-circle-fill bi-button";
+                        }
+                    });
+
+                    audio.play();
+                    audio.volume = 0.5;
+                    icon.className = "bi bi-pause-circle-fill bi-button";
+                } else {
+                    audio.pause();
+                    icon.className = "bi bi-play-circle-fill bi-button";
+                }
+            });
+
+            audio.addEventListener("ended", () => {
+                icon.className = "bi bi-play-circle-fill bi-button";
+            });
+        });
+        //Efeito de fogos
+        const tela = document.getElementById('fogos');
+        const contexto = tela.getContext('2d');
+        const somExplosao = new Audio('../sons/efeitos/fogo.mp3');
+        let gerarFogos = false;
+        const botaoFogos = document.getElementById('botao-fogos');
+
+        if (botaoFogos) {
+            botaoFogos.addEventListener('click', () => {
+                gerarFogos = !gerarFogos;
+                botaoFogos.textContent = gerarFogos ? 'Desativar efeitos' : 'Ativar efeitos';
+            });
+        }
+
+        function tocarSomExplosao() {
+            const som = somExplosao.cloneNode();
+            som.volume = 1;
+            som.play();
+        }
+
+        function redimensionarTela() {
+            tela.width = window.innerWidth;
+            tela.height = window.innerHeight;
+        }
+        window.addEventListener('resize', redimensionarTela);
+        redimensionarTela();
+
+        class Particula {
+            constructor(x, y, cor) {
+                this.x = x;
+                this.y = y;
+                this.cor = cor;
+                this.velocidade = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.atrito = 0.99;
+                this.raio = 2;
+            }
+
+            desenhar() {
+                if (this.alpha <= 0) return;
+                contexto.save();
+                contexto.globalAlpha = this.alpha;
+                contexto.beginPath();
+                contexto.arc(this.x, this.y, this.raio, 0, Math.PI * 2);
+                contexto.fillStyle = this.cor;
+                contexto.fill();
+                contexto.restore();
+            }
+
+            atualizar() {
+                this.velocidade.x *= this.atrito;
+                this.velocidade.y *= this.atrito;
+                this.x += this.velocidade.x;
+                this.y += this.velocidade.y;
+                this.alpha = Math.max(0, this.alpha - 0.01);
+            }
+        }
+
+        class Fogo {
+            constructor(x, y, cor) {
+                this.x = x;
+                this.y = y;
+                this.cor = cor;
+                this.velocidade = { x: 0, y: Math.random() * -2.5 - 0.5 };
+                this.particulas = [];
+                this.duracao = 180;
+                this.explodiu = false;
+                this.raio = 3;
+            }
+
+            desenhar() {
+                if (this.explodiu) return;
+                contexto.beginPath();
+                contexto.arc(this.x, this.y, this.raio, 0, Math.PI * 2);
+                contexto.fillStyle = this.cor;
+                contexto.fill();
+            }
+
+
+            explodir() {
+                tocarSomExplosao();
+                for (let i = 0; i < 50; i++) {
+                    this.particulas.push(new Particula(this.x, this.y, this.cor));
+                }
+            }
+
+            atualizar() {
+                if (this.duracao <= 0 && !this.explodiu) {
+                    this.explodir();
+                    this.velocidade = { x: 0, y: 0 };
+                    this.explodiu = true;
+                }
+
+                if (!this.explodiu) {
+                    this.y += this.velocidade.y;
+                }
+
+                this.duracao--;
+
+                const novas = [];
+                for (let i = 0; i < this.particulas.length; i++) {
+                    const p = this.particulas[i];
+                    p.atualizar();
+                    if (p.alpha > 0) {
+                        p.desenhar();
+                        novas.push(p);
+                    }
+                }
+                this.particulas = novas;
+            }
+        }
+
+        const listaDeFogos = [];
+        let animacaoAtiva = false;
+        let idAnimacao = null;
+
+        function animarFogos() {
+            idAnimacao = requestAnimationFrame(animarFogos);
+            contexto.clearRect(0, 0, tela.width, tela.height);
+
+            for (let i = listaDeFogos.length - 1; i >= 0; i--) {
+                const fogo = listaDeFogos[i];
+                fogo.atualizar();
+                fogo.desenhar();
+
+                if (fogo.explodiu && fogo.particulas.length === 0) {
+                    listaDeFogos.splice(i, 1);
+                }
+            }
+
+            if (gerarFogos && Math.random() < 0.015) {
+                const x = Math.random() * tela.width;
+                const cor = `hsl(${Math.random() * 360}, 50%, 50%)`;
+                listaDeFogos.push(new Fogo(x, tela.height, cor));
+            }
+        }
+
+        function dispararFogos(duracao = 30000) {
+            if (animacaoAtiva) return;
+            animacaoAtiva = true;
+            animarFogos();
+
+            setTimeout(() => {
+                cancelAnimationFrame(idAnimacao);
+                animacaoAtiva = false;
+                contexto.clearRect(0, 0, tela.width, tela.height);
+                listaDeFogos.length = 0;
+            }, duracao);
+        }
+
     </script>
 </body>
 

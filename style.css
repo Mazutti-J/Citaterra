@@ -13,15 +13,8 @@ body {
     color: var(--cor-principal);
 }
 
-.parallax-container {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-    z-index: 0;
-}
-
 .parallax-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('imagens/fundo/fundo_esverdeado.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imagens/fundo/fundo_amarelado.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -52,6 +45,20 @@ body {
     z-index: +1;
 }
 
+.custom-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+.custom-player button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .body-hero {
     padding: 20px;
 }
@@ -78,4 +85,14 @@ a,
 a:hover,
 .bi-button:hover {
     color: var(--cor-destaque3);
+}
+
+canvas#fogos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: +1;
+    pointer-events: none;
 }
