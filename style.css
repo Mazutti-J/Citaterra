@@ -14,7 +14,7 @@ body {
 }
 
 .parallax-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imagens/fundo/fundo_amarelado.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fundo_amarelado.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
